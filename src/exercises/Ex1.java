@@ -1,0 +1,33 @@
+package exercises;
+
+import java.util.Scanner;
+
+/* 
+Desenvolva um programa em Java para gerenciar os produtos de uma loja de
+conveniência, utilizando um ArrayList como estrutura de dados. Cada produto deve
+ter, no mínimo, nome, preço de venda e quantidade em estoque. Para facilitar o uso
+pelos funcionários, o programa precisa permitir consultas rápidas a um produto
+pelo seu código (equivalente à posição no ArrayList), exibindo as informações
+essenciais: nome, preço e quantidade disponível.
+Quando ocorre uma venda, o sistema deve localizar o produto no ArrayList e
+verificar se há estoque suficiente para atender ao pedido. Em caso positivo, deve
+descontar a quantidade vendida do estoque e atualizar as informações no ArrayList.
+Se o estoque for insuficiente, é importante exibir um aviso informando que a venda
+não pode ser concluída.
+A gerência também precisa de um mecanismo para alterar o valor de venda de
+qualquer produto, a fim de aplicar promoções ou ajustar preços. Isso implica
+encontrar o produto no ArrayList e redefinir seu preço de acordo com as instruções
+recebidas.
+Por fim, o programa deve exibir relatórios que mostrem todos os produtos
+armazenados no ArrayList, apresentando as informações-chave de cada item para
+auxiliar em conferências e decisões de compra.
+*/
+
+public class Ex1 implements Exercise {
+
+    @Override
+    public void run(Scanner sc) {
+        System.out.println("--- Estudo de caso 1 ---\n");
+
+    }
+}
