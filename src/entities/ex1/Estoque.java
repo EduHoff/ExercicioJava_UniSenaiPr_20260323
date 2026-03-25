@@ -1,13 +1,13 @@
-package exercises.ex1;
+package entities.ex1;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Estoque {
 
-    private static List<Produto> estoque = new ArrayList<>();
+    private List<Produto> estoque = new ArrayList<>();
 
-    public static void adicionarProduto(Produto p){
+    public void adicionarProduto(Produto p){
         if(!estoque.contains(p)){
             estoque.add(p);
         }else{
@@ -15,16 +15,16 @@ public class Estoque {
         }     
     }
 
-    public static void removerProduto(Produto p){
+    public void removerProduto(Produto p){
         estoque.remove(p);
     }
 
-    public static void removerProduto(int index){
+    public void removerProduto(int index){
         estoque.remove(index);
     }
 
 
-    public static void venderProduto(int index, int qtd){
+    public void venderProduto(int index, int qtd){
 
         if (index < 0 || index >= estoque.size()) {
             System.out.println("Erro: Código de produto inválido!");
@@ -44,7 +44,7 @@ public class Estoque {
         }
     }
 
-    public static void atualizarPreco(int index, double preco){
+    public void atualizarPreco(int index, double preco){
 
         if (index < 0 || index >= estoque.size()) {
             System.out.println("Erro: Código de produto inválido!");
@@ -60,7 +60,7 @@ public class Estoque {
         estoque.get(index).setPreco(preco);
     }
 
-    public static void gerarRelatorio() {
+    public void gerarRelatorio() {
         System.out.println("=== RELATÓRIO DE PRODUTOS ===");
         for (int i = 0; i < estoque.size(); i++) {
             System.out.println("Cód: " + i + " | " + estoque.get(i).toString());

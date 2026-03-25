@@ -1,4 +1,4 @@
-package exercises.ex1;
+package entities.ex1;
 
 public class Produto {
 

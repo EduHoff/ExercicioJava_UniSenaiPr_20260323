@@ -2,6 +2,8 @@ package exercises;
 
 import java.util.Scanner;
 
+import entities.ex2.Banco;
+
 /* 
 Você precisa criar um programa em Java para representar contas bancárias de
 forma simples, mas desta vez o sistema deve ser capaz de gerenciar múltiplas
@@ -25,6 +27,22 @@ public class Ex2 implements Exercise {
     @Override
     public void run(Scanner sc) {
         System.out.println("--- Estudo de caso 2 ---\n");
+
+
+        Banco banco = new Banco();
+
+        banco.cadastrarCliente("Eduardo", 10000);
+        banco.cadastrarCliente("Flávio", 1000000);
+        banco.cadastrarCliente("Madu", 300000);
+        banco.listarContas();
+
+        banco.consultarConta(2);
+        //ContaBancaria cliente = new ContaBancaria("Eduardo", 123, 10000);
+
+        //System.out.println(cliente.toString());
+
+        
+
 
     }
 }

@@ -2,8 +2,8 @@ package exercises;
 
 import java.util.Scanner;
 
-import exercises.ex1.Estoque;
-import exercises.ex1.Produto;
+import entities.ex1.Estoque;
+import entities.ex1.Produto;
 
 /* 
 Desenvolva um programa em Java para gerenciar os produtos de uma loja de
@@ -32,24 +32,24 @@ public class Ex1 implements Exercise {
     public void run(Scanner sc) {
         System.out.println("--- Estudo de caso 1 ---\n");
 
-
+    Estoque estoque = new Estoque();
     Produto p1 = new Produto("Steam Frame", 12000.00, 15);
     Produto p2 = new Produto("Container", 200000.00, 20);
     Produto p3 = new Produto("Lampada", 20.00, 100);
-    Estoque.adicionarProduto(p1);
-    Estoque.adicionarProduto(p2);
-    Estoque.adicionarProduto(p3);
+    estoque.adicionarProduto(p1);
+    estoque.adicionarProduto(p2);
+    estoque.adicionarProduto(p3);
 
     System.out.println("\n--- Realizando Vendas ---");
-    Estoque.venderProduto(2, 30); 
-    Estoque.venderProduto(1, 100); 
-    Estoque.venderProduto(99, 1);
+    estoque.venderProduto(2, 30); 
+    estoque.venderProduto(1, 100); 
+    estoque.venderProduto(99, 1);
 
     System.out.println("\n--- Aplicando Reajustes ---");
-    Estoque.atualizarPreco(0, 10500.00); 
-    Estoque.atualizarPreco(2, -5.00); 
+    estoque.atualizarPreco(0, 10500.00); 
+    estoque.atualizarPreco(2, -5.00); 
 
     System.out.println("\n--- Situação Final do Estoque ---");
-    Estoque.gerarRelatorio();
+    estoque.gerarRelatorio();
     }
 }
