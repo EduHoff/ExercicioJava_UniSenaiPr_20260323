@@ -28,21 +28,25 @@ public class Ex2 implements Exercise {
     public void run(Scanner sc) {
         System.out.println("--- Estudo de caso 2 ---\n");
 
-
         Banco banco = new Banco();
 
-        banco.cadastrarCliente("Eduardo", 10000);
-        banco.cadastrarCliente("Flávio", 1000000);
-        banco.cadastrarCliente("Madu", 300000);
+        banco.cadastrarCliente("Eduardo", 10000.0);
+        banco.cadastrarCliente("Flávio", 1000000.0);
+        banco.cadastrarCliente("Madu", 300000.0);
+        
         banco.listarContas();
 
-        banco.consultarConta(2);
-        //ContaBancaria cliente = new ContaBancaria("Eduardo", 123, 10000);
+        System.out.println("\n--- Testando Operações ---");
+        banco.depositarConta(1001, 500.0);
 
-        //System.out.println(cliente.toString());
+        banco.sacarConta(1003, 50.0); 
+        banco.sacarConta(1001, 20000.0);
 
-        
+        banco.consultarConta(1002);
+        banco.consultarConta(9999);
 
 
+        System.out.println("\n--- Estado Final do Banco ---");
+        banco.listarContas();
     }
 }

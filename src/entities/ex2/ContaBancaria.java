@@ -5,7 +5,7 @@ public class ContaBancaria {
     private String titular;
     private int num_conta;
     private double saldo;
-
+    
 
     public ContaBancaria(String titular, int num_conta, double saldo) {
         this.titular = titular;
@@ -15,9 +15,25 @@ public class ContaBancaria {
 
     public ContaBancaria(){}
 
-    public void depositar(double valor){}
+    public void depositar(double valor){
+        if(valor <= 0){
+            System.out.println("Valor do depósito precisa ser maior que zero!");
+        }else{
+            saldo += valor;
+            System.out.println("Depósito de R$"+valor+" realizado com sucesso!");
+        }
+    }
 
-    public void sacar(double valor){}
+    public void sacar(double valor){
+        if(valor <= 0){
+            System.out.println("Valor do saque precisa ser maior que zero!");
+        }else if(valor > saldo){
+            System.out.println("Valor do saque não pode utrapssar o saldo da conta!");
+        }else{
+            saldo -= valor;
+            System.out.println("Saque realizado com sucesso!");
+        }
+    }
 
     @Override
     public String toString() {
